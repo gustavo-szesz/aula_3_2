@@ -5,7 +5,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 # Configuração do MongoDB
-uri = "mongodb+srv://admin_gs:newPass@cluster0.n8rvg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+uri = "mongodb+srv://admin_gs:<SENHA>@cluster0.n8rvg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 client = MongoClient(uri)
 db = client['compradb']
 collection = db['comprascol']
