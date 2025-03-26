@@ -1,0 +1,45 @@
+# GET /produtos: Lista todos os produtos
+curl -X GET http://127.0.0.1:3000/produtos -H "Content-Type: application/json"
+
+# POST /produtos: Adiciona um novo produto
+curl -X POST http://127.0.0.1:3000/produtos \
+-H "Content-Type: application/json" \
+-d '{
+    "nome": "Produto Teste",
+    "fornecedor": "Fornecedor Teste",
+    "endereco_fornecedor": "Rua Teste, Cidade Teste",
+    "quantidade": 10,
+    "endereco": "Rua Produto, Cidade Produto",
+    "preco_unitario": 99.99
+}'
+
+# PUT /produtos/:id: Atualiza um produto pelo ID
+curl -X PUT http://127.0.0.1:3000/produtos/<id_do_produto> \
+-H "Content-Type: application/json" \
+-d '{
+    "nome": "Produto Atualizado",
+    "fornecedor": "Fornecedor Atualizado",
+    "endereco_fornecedor": "Rua Atualizada, Cidade Atualizada",
+    "quantidade": 20,
+    "endereco": "Rua Atualizada, Cidade Atualizada",
+    "preco_unitario": 199.99
+}'
+
+Exemplo::
+curl -X PUT http://127.0.0.1:3000/produtos/67e4805a00a5c8354feabfbc \
+-H "Content-Type: application/json" \
+-d '{
+    "nome": "Produto Atualizado",
+    "fornecedor": "Fornecedor Atualizado",
+    "endereco_fornecedor": "Rua Atualizada, Cidade Atualizada",
+    "quantidade": 20,
+    "endereco": "Rua Atualizada, Cidade Atualizada",
+    "preco_unitario": 199.99
+}'
+
+# DELETE /produtos/:id: Remove um produto pelo ID
+# Substitua <id_do_produto> pelo ID real de um produto existente
+curl -X DELETE http://127.0.0.1:3000/produtos/<id_do_produto> -H "Content-Type: application/json"
+
+Exemplo:
+curl -X DELETE http://127.0.0.1:3000/produtos/67e4805a00a5c8354feabfbc -H "Content-Type: application/json"
