@@ -16,12 +16,12 @@ HTTP_NOT_FOUND = 404
 HTTP_INTERNAL_SERVER_ERROR = 500
 HTTP_NOT_IMPLEMENTED = 501
 HTTP_BAD_GATEWAY = 502
-
+  
 # Rotas CRUD
 
 # GET /produtos
 @app.route('/produtos', methods=['GET'])
-def get_produtos():
+def get_produtos():  
     try:
         produtos = list(collection.find())
         for produto in produtos:

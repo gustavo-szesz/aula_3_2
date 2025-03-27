@@ -42,4 +42,4 @@ curl -X PUT http://127.0.0.1:3000/produtos/67e4805a00a5c8354feabfbc \
 curl -X DELETE http://127.0.0.1:3000/produtos/<id_do_produto> -H "Content-Type: application/json"
 
 Exemplo:
-curl -X DELETE http://127.0.0.1:3000/produtos/67e4805a00a5c8354feabfbc -H "Content-Type: application/json"
+curl -X DELETE http://127.0.0.1:3000/produtos/67e4805a00a5c8354feabfbc -H  "Content-Type: application/json"
